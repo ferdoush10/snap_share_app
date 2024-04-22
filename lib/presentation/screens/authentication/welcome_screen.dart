@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:snap_share_app/authentication/presentation/screens/create_account_screen.dart';
-import 'package:snap_share_app/authentication/presentation/screens/sign_in_screen.dart';
-import 'package:snap_share_app/authentication/presentation/widgets/button_design.dart';
+import 'package:snap_share_app/presentation/screens/authentication/sign_in_screen.dart';
 import 'package:snap_share_app/utilities/all_colors.dart';
 import 'package:snap_share_app/utilities/styles.dart';
+
+import '../../widgets/button_design.dart';
+import 'create_account_screen.dart';
 
 
 class WelcomeScreen extends StatefulWidget {
@@ -30,12 +31,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Text("SociaLive",style: lobsterRegular.copyWith(fontSize: 24, color: AllColors.colorText,),),
             const SizedBox(height: 40,),
             ElevatedButtonWidget(title: 'Create Account', onPressedButton: (){
-              Get.to(const CreateAccountScreen());
+              Get.to(() => const CreateAccountScreen());
             }),
             const SizedBox(height: 20,),
             InkWell(
               onTap: (){
-                Get.to(const SignInScreen());
+                Get.to(() =>const SignInScreen());
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

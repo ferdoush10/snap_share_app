@@ -59,12 +59,15 @@ class AllColors {
 
   static const Color buttonColor = Color(0xFF0077DD);
   static const Color colorWhite = Color(0xFFFFFFFF);
-  static const Color colorBackground = Color(0xFFF9F9F9);
+  static const Color colorBackground = Color(0xFFE9EFFF);
   static const Color colorBlueBorder = Color(0xFF6993FF);
   static const Color colorBorder = Color(0xFFD0D5DD);
   static const Color colorText = Color(0xFF101828);
   static const Color colorSubtitleText = Color(0xFF98A2B3);
   static const Color colorCheckboxBorder = Color(0xFF475467);
+  static const Color colorStoryBackground = Color(0xFFF9F9FA);
+  static const Color colorStoryBorder = Color(0xFFEAECF0);
+
 
 
 
