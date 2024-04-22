@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snap_share_app/presentation/ui/screens/following_screen.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:snap_share_app/presentation/screens/authentication/welcome_screen.dart';
@@ -10,9 +11,6 @@ Future<void> main() async {
 
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -23,5 +21,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
