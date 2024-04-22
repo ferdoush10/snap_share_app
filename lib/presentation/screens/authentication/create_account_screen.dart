@@ -124,7 +124,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       child: TextFormField(
                         controller: _emailTEController,
                         keyboardType: TextInputType.phone,
-                        textInputAction: TextInputAction.next,
+                        //InputAction: TextInputAction.next,
                         decoration:  InputDecoration(
                           border: InputBorder.none,
                           focusedBorder: InputBorder.none,
