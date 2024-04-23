@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Search extends StatelessWidget {
@@ -10,7 +9,7 @@ class Search extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Padding(
             padding: const EdgeInsets.all(15),
             child: Container(
@@ -20,7 +19,7 @@ class Search extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.grey[300],
               ),
-              child: Row(
+              child: const Row(
                 children: [
                   SizedBox(width: 10,),
                   Icon(Icons.search),
@@ -33,7 +32,7 @@ class Search extends StatelessWidget {
           Expanded(
             child: GridView.builder(
               scrollDirection: Axis.vertical,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10
