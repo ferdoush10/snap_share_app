@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snap_share_app/presentation/widgets/app_seach_bar.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key});
@@ -10,25 +11,7 @@ class Search extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 40),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Container(
-              height: 45,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.grey[300],
-              ),
-              child: const Row(
-                children: [
-                  SizedBox(width: 10,),
-                  Icon(Icons.search),
-                  SizedBox(width: 10,),
-                  Text("Search")
-                ],
-              ),
-            ),
-          ),
+          AppSearchBar(),
           Expanded(
             child: GridView.builder(
               scrollDirection: Axis.vertical,
@@ -49,4 +32,6 @@ class Search extends StatelessWidget {
     );
   }
 }
+
+
 
