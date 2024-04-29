@@ -26,7 +26,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
         leading: IconButton(
             onPressed: (){
          Get.back();
-        }, padding: EdgeInsets.all(0),
+        }, padding: const EdgeInsets.all(0),
             icon: const Icon(CupertinoIcons.back,color: AllColors.colorText,size: 24,)),
       ),
       body: Form(

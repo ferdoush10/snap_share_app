@@ -1,7 +1,5 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:snap_share_app/utilities/all_colors.dart';
 import 'package:snap_share_app/utilities/all_size.dart';
 import 'package:snap_share_app/utilities/styles.dart';
@@ -15,14 +13,14 @@ class UploadContentTwo extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back_ios_new_outlined),
+          leading: const Icon(Icons.arrow_back_ios_new_outlined),
           title: const Text(
             "New Post",
             style: TextStyle(
                 fontSize: AllSizes.fontSizeExtraOverLarge,
                 fontWeight: FontWeight.w600),
           ),
-          actions: [
+          actions: const [
             Row(
               children: [
                 Text(
@@ -49,7 +47,7 @@ class UploadContentTwo extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  Container(
+                  SizedBox(
                     height: 120,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
@@ -96,14 +94,14 @@ class UploadContentTwo extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: ListTile(
-                  leading: Icon(Icons.location_on_outlined,color: Colors.blue,),
-                  title: Text("Jamuna Future Park",style: TextStyle(
+                  leading: const Icon(Icons.location_on_outlined,color: Colors.blue,),
+                  title: const Text("Jamuna Future Park",style: TextStyle(
                       fontWeight: FontWeight.w500
                   ),),
                   subtitle: Text("0.4mi. ka-244, Progati Sarani, kuril, Baridhara",maxLines: 1,style: TextStyle(
                       color: Colors.grey.shade500
                   ),),
-                  trailing: Icon(Icons.close,color: Colors.grey,),
+                  trailing: const Icon(Icons.close,color: Colors.grey,),
                 )
             ),
             Divider(
@@ -118,14 +116,14 @@ class UploadContentTwo extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: ListTile(
-                  leading: Icon(Icons.play_circle_outline_rounded,color: Colors.blue,),
-                  title: Text("Rema, Selena Gomez - Calm Down",style: TextStyle(
+                  leading: const Icon(Icons.play_circle_outline_rounded,color: Colors.blue,),
+                  title: const Text("Rema, Selena Gomez - Calm Down",style: TextStyle(
                       fontWeight: FontWeight.w500
                   ),),
                   subtitle: Text("20 second",maxLines: 1,style: TextStyle(
                       color: Colors.grey.shade500
                   ),),
-                  trailing: Icon(Icons.close,color: Colors.grey,),
+                  trailing: const Icon(Icons.close,color: Colors.grey,),
                 )
             ),
             Divider(

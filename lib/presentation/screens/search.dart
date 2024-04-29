@@ -11,7 +11,7 @@ class Search extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 40),
-          AppSearchBar(),
+          const AppSearchBar(),
           Expanded(
             child: GridView.builder(
               scrollDirection: Axis.vertical,

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:snap_share_app/presentation/widgets/app_seach_bar.dart';
 
 class FollowingAndFollowers extends StatefulWidget {
@@ -48,9 +46,9 @@ class _FollowingAndFollowersState extends State<FollowingAndFollowers> {
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            leading: Icon(Icons.arrow_back_ios),
+            leading: const Icon(Icons.arrow_back_ios),
             title: Text(showFollowing ? 'Following' : 'Followers'),
-            bottom: TabBar(tabs: [
+            bottom: const TabBar(tabs: [
               Tab(
                 text: "Following",
               ),
@@ -71,20 +69,20 @@ class _FollowingAndFollowersState extends State<FollowingAndFollowers> {
   Widget _buildFollowingList() {
     return Column(
         children: [
-          AppSearchBar(),
+          const AppSearchBar(),
           Expanded(
             child: ListView.separated(
                 itemBuilder: (context, index) {
                   final String userName = followingList[index];
                   final bool isFollowing = followedUsers.contains(userName);
                   return ListTile(
-                    leading: CircleAvatar(
+                    leading: const CircleAvatar(
                         radius: 20,
                         backgroundImage: NetworkImage(
                             "https://images.pexels.com/photos/19664604/pexels-photo-19664604/free-photo-of-portrait-of-man-playing-on-guitar-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")),
                     title: Text(
                       userName,
-                      style: TextStyle(fontWeight: FontWeight.w500),
+                      style: const TextStyle(fontWeight: FontWeight.w500),
                     ),
                     subtitle: Text(
                       "@sagor",
@@ -102,18 +100,18 @@ class _FollowingAndFollowersState extends State<FollowingAndFollowers> {
                             }
                           });
                         },
-                        child: Text(isFollowing ? "Follow" : "Unfollow"),
                         style: ElevatedButton.styleFrom(
                             backgroundColor: isFollowing ? Colors.blue : null,
                             foregroundColor: isFollowing ? Colors.white : null,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(7))),
+                        child: Text(isFollowing ? "Follow" : "Unfollow"),
                       ),
                     ),
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return Divider(
+                  return const Divider(
                     height: 2,
                   );
                 },
@@ -126,20 +124,20 @@ class _FollowingAndFollowersState extends State<FollowingAndFollowers> {
   Widget _buildFollowerList() {
     return Column(
         children: [
-          AppSearchBar(),
+          const AppSearchBar(),
           Expanded(
             child: ListView.separated(
                 itemBuilder: (context, index) {
                   final String userName = followerList[index];
                   final bool isFollowing = followedUsers.contains(userName);
                   return ListTile(
-                    leading: CircleAvatar(
+                    leading: const CircleAvatar(
                         radius: 20,
                         backgroundImage: NetworkImage(
                             "https://images.pexels.com/photos/19664604/pexels-photo-19664604/free-photo-of-portrait-of-man-playing-on-guitar-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")),
                     title: Text(
                       userName,
-                      style: TextStyle(fontWeight: FontWeight.w500),
+                      style: const TextStyle(fontWeight: FontWeight.w500),
                     ),
                     trailing: ElevatedButton(
                       onPressed: () {
@@ -147,12 +145,12 @@ class _FollowingAndFollowersState extends State<FollowingAndFollowers> {
                           _showRemoveAlert(userName);
                         });
                       },
-                      child: Text("Remove"),
+                      child: const Text("Remove"),
                     ),
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return Divider(
+                  return const Divider(
                     height: 2,
                   );
                 },
@@ -166,24 +164,24 @@ class _FollowingAndFollowersState extends State<FollowingAndFollowers> {
     showModalBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
+        return SizedBox(
             height: 150,
             child: Column(
               children: [
                 ListTile(
                   title: ListTile(
-                    leading: CircleAvatar(
+                    leading: const CircleAvatar(
                         radius: 20,
                         backgroundImage: NetworkImage(
                             "https://images.pexels.com/photos/19664604/pexels-photo-19664604/free-photo-of-portrait-of-man-playing-on-guitar-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")),
                     title: Text(
                       userName,
-                      style: TextStyle(fontWeight: FontWeight.w500),
+                      style: const TextStyle(fontWeight: FontWeight.w500),
                     ),
-                    subtitle: Text("@sagor"),
+                    subtitle: const Text("@sagor"),
                   ),
                 ),
-                Divider(
+                const Divider(
                   height: 2,
                 ),
                 Row(
@@ -196,15 +194,15 @@ class _FollowingAndFollowersState extends State<FollowingAndFollowers> {
                         });
                         Navigator.of(context).pop();
                       },
-                      child: Text(
+                      child: const Text(
                         "Remove",
                         style: TextStyle(color: Colors.red),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
-                    Icon(Icons.keyboard_arrow_down_outlined)
+                    const Icon(Icons.keyboard_arrow_down_outlined)
                   ],
                 )
               ],

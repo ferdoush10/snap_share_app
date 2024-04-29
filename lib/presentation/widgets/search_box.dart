@@ -6,21 +6,21 @@ class SearchTextField extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         hintText: 'Search',
-        prefixIcon: Icon(
+        prefixIcon: const Icon(
           Icons.search,
           color: Colors.grey,
         ),
 
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+          borderSide: const BorderSide(color: Colors.grey),
           borderRadius: BorderRadius.circular(8),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+          borderSide: const BorderSide(color: Colors.grey),
           borderRadius: BorderRadius.circular(8),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+          borderSide: const BorderSide(color: Colors.grey),
           borderRadius: BorderRadius.circular(8),
         ),
         errorBorder: OutlineInputBorder(

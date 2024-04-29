@@ -1,30 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:snap_share_app/presentation/widgets/update_content/update_content_add_music_container.dart';
-import 'package:snap_share_app/presentation/widgets/update_content/update_content_eleveted_button.dart';
-import 'package:snap_share_app/utilities/all_colors.dart';
 import 'package:snap_share_app/utilities/all_size.dart';
-import 'package:snap_share_app/utilities/styles.dart';
-import 'package:snap_share_app/widget/search_bar.dart';
+import 'package:snap_share_app/presentation/widgets/search_bar.dart';
 
 
-class UploadContentAddLocation extends StatelessWidget {
-  const UploadContentAddLocation({super.key});
+class UploadContentAddMusic extends StatelessWidget {
+  const UploadContentAddMusic({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back_ios_new_outlined),
+          leading: const Icon(Icons.arrow_back_ios_new_outlined),
           title: const Text(
-            "Add Location",
+            "Add Music",
             style: TextStyle(
                 fontSize: AllSizes.fontSizeExtraOverLarge,
                 fontWeight: FontWeight.w600),
           ),
-          actions: [
+          actions: const [
             Row(
               children: [
                 Text(
@@ -43,17 +37,18 @@ class UploadContentAddLocation extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AppSearchBar(),
+            const AppSearchBar(),
             Expanded(
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                   itemCount: 10,
                   itemBuilder: (context,index){
                     return ListTile(
-                      title: Text("Jamuna Future Park",style: TextStyle(
+                      trailing: Icon(Icons.play_circle_outline_rounded,color: Colors.grey.shade600,),
+                      title: const Text("Rema, Selena Gomez - Calm Down",style: TextStyle(
                         fontWeight: FontWeight.w500
                       ),),
-                      subtitle: Text("0.4. km-244, Progoti Sarani, Baridhara",style: TextStyle(
+                      subtitle: Text("20 second",style: TextStyle(
                         color: Colors.grey.shade600
                       ),),
                     );

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:snap_share_app/presentation/widgets/update_content/update_content_add_music_container.dart';
 import 'package:snap_share_app/presentation/widgets/update_content/update_content_eleveted_button.dart';
 import 'package:snap_share_app/utilities/all_colors.dart';
@@ -16,14 +14,14 @@ class UploadContent extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back_ios_new_outlined),
+          leading: const Icon(Icons.arrow_back_ios_new_outlined),
           title: const Text(
             "New Post",
             style: TextStyle(
                 fontSize: AllSizes.fontSizeExtraOverLarge,
                 fontWeight: FontWeight.w600),
           ),
-          actions: [
+          actions: const [
             Row(
               children: [
                 Text(
@@ -50,7 +48,7 @@ class UploadContent extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  Container(
+                  SizedBox(
                     height: 120,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
@@ -89,8 +87,8 @@ class UploadContent extends StatelessWidget {
               height: 1,
               color: Colors.grey.withOpacity(.4),
             ),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
+            const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text("Add Location",style: TextStyle(
                   fontSize: AllSizes.fontSizeLarge,
                   fontWeight: FontWeight.w500
@@ -100,8 +98,8 @@ class UploadContent extends StatelessWidget {
               height: 1,
               color: Colors.grey.withOpacity(.4),
             ),
-            Padding(
-                padding: const EdgeInsets.all(12.0),
+            const Padding(
+                padding: EdgeInsets.all(12.0),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -119,8 +117,8 @@ class UploadContent extends StatelessWidget {
               height: 1,
               color: Colors.grey.withOpacity(.4),
             ),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
+            const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text("Add Music",style: TextStyle(
                   fontSize: AllSizes.fontSizeLarge,
                   fontWeight: FontWeight.w500
@@ -130,7 +128,7 @@ class UploadContent extends StatelessWidget {
               height: 1,
               color: Colors.grey.withOpacity(.4),
             ),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(children: [
                 updateContentAddMusicContainer(),

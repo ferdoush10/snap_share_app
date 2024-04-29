@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../utilities/all_colors.dart';
 import '../../utilities/styles.dart';
@@ -103,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
           shrinkWrap: false,
           scrollDirection: Axis.vertical,
           itemBuilder: (context, index) {
-            return StatuleTile();
+            return const StatuleTile();
           },
           separatorBuilder: (_, __) {
             return const SizedBox(
