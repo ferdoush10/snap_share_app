@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:snap_share_app/screens/profile_page.dart';
 
 
 void main() {
